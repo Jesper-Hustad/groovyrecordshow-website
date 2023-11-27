@@ -315,7 +315,8 @@ body {
     color: white;
     border: 3px solid #ffffff; /* Green */
     border-radius: 8px;
-    padding: 11px 24px;
+    padding: 11px 44px;
+    /* min-height: 2rem; */
     text-align: center;
     text-decoration: none;
     display: inline-block;
