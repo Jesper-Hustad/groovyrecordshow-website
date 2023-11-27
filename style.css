@@ -54,9 +54,29 @@ body {
 #top-right-image {
     position: absolute;
     top: 0px;
-    right: 0px;
+    right: -40px;
     z-index: -999;
     transform: scale(1.5);
+    transform-origin: top right;
+}
+
+/* make top right image on normal laptop screen width change transofrm to scale 1.2 */
+@media only screen and (min-width: 1000px) {
+    #top-right-image {
+        transform: scale(1);
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #top-right-image {
+        transform: scale(0.8);
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    #top-right-image {
+        transform: scale(0.6);
+    }
 }
 
 .stars {

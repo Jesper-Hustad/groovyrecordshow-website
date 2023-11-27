@@ -1,5 +1,5 @@
 function handleInputChange(){
-    var inputText = document.getElementById('myInput').value;
+    var inputText = document.getElementById('tlemail').value;
     var button = document.getElementById('myButton');
 
     // Check if the input has any text
@@ -11,7 +11,7 @@ function handleInputChange(){
 }
 
 function joinNewsletter(){
-    var inputText = document.getElementById('myInput').value;
+    var inputText = document.getElementById('tlemail').value;
     
     // check that input text is valid email
     if (inputText.trim() !== '' && validateEmail(inputText)) {
