@@ -1,0 +1,332 @@
+@font-face { font-family: Univers; src: url('assets/Univers\ LT\ Std\ 93.otf'); } 
+
+body {
+    /* background-color: #111111; */
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+body {
+    background: linear-gradient(270deg, #1f1f2b, #1a1e2d);
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+}
+  
+  .bg {
+    pointer-events: none;
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 300%;
+    height: 300vh;
+    background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+    background-repeat: repeat;
+    animation: bg-animation 0.7s infinite;
+    opacity: .6;
+    visibility: visible;
+    transform: scale(0.5);
+  }
+  
+  @keyframes bg-animation {
+      0% { transform: translate(0,0) }
+      10% { transform: translate(-5%,-5%) }
+      20% { transform: translate(-10%,5%) }
+      30% { transform: translate(5%,-10%) }
+      40% { transform: translate(-5%,15%) }
+      50% { transform: translate(-10%,5%) }
+      60% { transform: translate(15%,0) }
+      70% { transform: translate(0,10%) }
+      80% { transform: translate(-15%,0) }
+      90% { transform: translate(10%,5%) }
+      100% { transform: translate(5%,0) }
+  }
+
+  /* body{
+    background-image: linear-gradient(165deg, #3a3f6a, #2f2f4e, #2f2b46, #201c2d, #1c1825, #17131d, #120e16, #18141c, #1d1922, #221e28, #27232e);
+    background-attachment: fixed; 
+} */
+
+#top-right-image {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: -999;
+    transform: scale(1.5);
+}
+
+.stars {
+    background:#000 url(assets/stars.png) repeat top center;
+    z-index:-1;
+    mix-blend-mode: screen;
+    opacity: 0.2;
+  }
+
+  .stars {
+    position:absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 200vh;
+    display:block;
+  }
+
+
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+
+
+
+
+
+.uuu {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+
+body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.8;
+    color: #444;
+    font-size: larger;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+    margin-bottom: -0.7rem;
+    
+  }
+
+  h1,h2,h3,h4,h5{
+    font-family: Univers;
+    text-shadow: -0.5px -0.5px 2px rgba(255, 255, 255, 0.49), 0.5px 0.5px 1px rgba(255, 255, 255, 0.17); 
+    color: #e83834 !important;
+    
+  }
+
+  a {
+    color: #3273dc
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0
+  }
+
+  .title span {
+    font-weight: 400
+  }
+
+  nav a {
+    margin-right: 10px
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px
+  }
+
+  input {
+    font-size: 16px
+  }
+
+  content {
+    line-height: 1.6
+  }
+
+  table {
+    width: 100%
+  }
+
+  img {
+    max-width: 100%
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small
+  }
+
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset
+  }
+
+  ul.blog-posts li {
+    display: flex
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb
+  }
+
+
+  @media(prefers-color-scheme:dark) {
+    body {
+      /* background-color: rgb(19 30 32); */
+      color: #ddd
+    }
+
+    h2{
+        color: white;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee
+    }
+
+    a {
+      color: #8cc2dd
+    }
+
+    code {
+      background-color: #141414;
+    }
+
+    pre code {
+      color: #ddd
+    }
+
+    blockquote {
+      color: #ccc
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd
+    }
+
+    .helptext {
+      color: #aaa
+    }
+  }
+
+
+
+  .button {
+    /* background-color: white; */
+    color: white;
+    border: 3px solid #ffffff; /* Green */
+    border-radius: 8px;
+    padding: 11px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    /* font-family: Univers; */
+}
+
+/* make an on hover for .button that simply adds a white drop shadow */
+.button:hover {
+    box-shadow: 0 0 0 2px white;
+}
+
+.basic-input{
+    /* simple input formatting */
+    /* same style as .button with white rounded border */
+    border: 3px solid #ffffff82; /* Green */
+    border-radius: 8px;
+    padding: 11px 5px;
+    /* text-align: center; */
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    width: 90%;
+    margin-bottom: 1rem;
+}
+
+/* when .basic-input selected make border fully white */
+.basic-input:focus{
+    border: 3px solid #ffffff; /* Green */
+    outline: none;
+}

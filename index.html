@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<link rel="stylesheet" href="style.css">
+
+<script src="script.js"></script>
+
+<img id="top-right-image" src="assets/moon-surfacev2.png" alt="Your Image Description"> 
+<body>
+<div class="background">
+    
+        <div class="content">
+
+            <!-- import image from assets/logo.png -->
+        
+        <img src="assets/logo.png" alt="logo" width="90%" 
+        style="display: block; margin-left: auto; margin-right: auto; margin-top: 1rem;">
+        
+        
+        <br><br>
+            <p>
+            Live every other Friday from 6 to 8 at 
+            <!-- link to gutsyradio.org -->
+            <a href="https://gutsyradio.org">GUTSYradio.org</a>
+            <br><br>
+            Join Paul along with his trusty audio technician Kratos as they embark on a musical journey through the grooviest 
+            tunes spanning all of <span class="uuu">space</span> and <span class="uuu">time</span>. 
+        </p>
+        <!-- button that when click sends alert message saying hey -->
+        
+        <br>
+        <h2>Next Show</h2>
+        <p>The Groovy Record Show is currently off the air.<br><br>
+            
+            Next scheduled show:<br>
+            <b>December 12th at 6pm</b>
+        </p>
+
+        <br>
+        <h2>Newsletter</h2>
+        <p>Never miss an episode of The Groovy Record Show! Sign up for free and get notified.</p>
+
+
+        <form 
+            style="border:1px solid #ccc;padding:3px;text-align:center;" 
+            action="https://tinyletter.com/thegroovyrecordshow" 
+            method="post" target="popupwindow" 
+            onsubmit="window.open('https://tinyletter.com/thegroovyrecordshow', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"
+        >
+            <p>
+                <label for="tlemail">Enter your email address</label>
+            </p>
+            
+            <p>
+                <input type="text" style="width:140px" name="email" id="tlemail" />
+            </p>
+            
+            <input type="hidden" value="1" name="embed"/>
+            <input type="submit" value="Subscribe" />
+            
+            <p>
+                <!-- <a href="https://tinyletter.com" target="_blank">powered by TinyLetter</a> -->
+            </p>
+        
+        </form>
+        
+
+
+        <input class="basic-input" type="email" id="myInput" oninput="handleInputChange()" placeholder="Your Email Address ">            
+            
+        <a style="opacity: 0.1;" href="" id="myButton" class="button" target="_blank" onclick="joinNewsletter()">Join Newsletter</a>
+
+        <!-- convert to HTML
+        Listen to the Archive
+        The full archive of 30+ episodes are all available for your listening pleasure
+        [Go to archive] (https://www.mixcloud.com/discover/paulfromca/?order=latest)
+        with h2 and p tags
+        -->
+        <br><br><br>
+        <h2>Archive</h2>
+        <p>The full archive of 30+ episodes are all available for your listening pleasure</p>
+
+        <!-- simple button that links to archive -->
+        <a href="https://www.mixcloud.com/discover/paulfromca/?order=latest" class="button" target="_blank" >Go to Archive</a>
+
+
+
+        
+
+    
+</div>
+</body>
+
+<div class="bg"></div>
+<div class="stars"></div>
+
+
+<script>
+    
+    // async function getGistTextContent(gistId){
+    //     let raw = await fetch("https://api.github.com/gists/" + gistId)
+    //     return Object.values((await raw.json()).files)[0].content
+    // }
+
+    // async function main(){
+    //     data = await getGistTextContent("f2c49fc044fb42baba83f6bb3da07109")
+    //     console.log(data)
+
+        
+    //     document.getElementById("message").innerText = data
+    // }
+    // main()
+
+
+
+    async function getGistTextContent(gistId){
+        const data = await fetch("https://api.github.com/gists/" + gistId)
+        return Object.values((await data.json()).files)[0].content
+    }
+
+    // var gist_id = "53e1780a5a68fe9281cfbbc9820d381f"
+    (async () => console.log(await getGistTextContent("53e1780a5a68fe9281cfbbc9820d381f")))();
+</script>
+</html>
