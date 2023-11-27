@@ -60,7 +60,6 @@ body {
     transform-origin: top right;
 }
 
-/* make top right image on normal laptop screen width change transofrm to scale 1.2 */
 @media only screen and (min-width: 1000px) {
     #top-right-image {
         transform: scale(1);
