@@ -67,12 +67,12 @@
 				textureCoord.x += (
 					sin(textureCoord.x * 10.0 + ((uTime * (PI / 3.0)) * 0.011))
 					+ sin(textureCoord.y * 10.0 + ((uTime * (PI / 2.489)) * 0.005))
-					) * 0.0055;
+					) * 0.0095;
 
 				textureCoord.y += (
 					sin(textureCoord.y * 20.0 + ((uTime * (PI / 2.023)) * 0.003))
 					+ sin(textureCoord.x * 20.0 + ((uTime * (PI / 3.1254)) * 0.005))
-					) * 0.0055;
+					) * 0.0095;
 
 				gl_FragColor = texture2D(uSampler0, textureCoord);
 			}
