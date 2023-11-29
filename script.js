@@ -1,3 +1,19 @@
+async function showIsLive() {
+    const NAME_TO_CHECK = "Paul from CA"
+    try {
+        const response = await fetch('https://public.radio.co/stations/s369d6f962/status');
+        if (!response.ok) return false;
+
+        const { source } = await response.json();
+        // console.log(source?.collaborator?.name)
+        return source?.collaborator?.name == NAME_TO_CHECK || false;
+    } catch (error) {
+        console.error('Error:', error);
+        return false;
+    }
+}
+
+
 function handleInputChange(){
     var inputText = document.getElementById('tlemail').value;
     var button = document.getElementById('myButton');
@@ -43,6 +59,14 @@ async function getGistTextContent(gistId){
 async function sendContact(ev) {
     ev.preventDefault();
 
+    const runCount = parseInt(getCookie('runCount')) || 0;
+
+    if (runCount >= 2) {
+        console.log('Function has already been run two times. Not running anymore.');
+        return;
+    }
+
+
     const senderEmail = document.getElementById('nameInput').value;
     const senderMessage = document.getElementById('messageInput').value;
 
@@ -68,4 +92,32 @@ async function sendContact(ev) {
     const result = response.ok
     const msg = result ? 'Song request sent successfully!' : 'Sorry, something went wrong';
     alert(msg);
+
+    if(result){
+        setCookie('runCount', runCount + 1, 10);
+    }
+  }
+
+
+
+
+
+// helper cookie storage functions to stop song request spam
+
+  function getCookie(name) {
+    const cookies = document.cookie.split(';');
+    for (const cookie of cookies) {
+      const [cookieName, cookieValue] = cookie.trim().split('=');
+      if (cookieName === name) {
+        return cookieValue;
+      }
+    }
+    return null;
+  }
+  
+  // Function to set a cookie with a given name, value, and expiration time in minutes
+  function setCookie(name, value, minutes) {
+    const expirationDate = new Date();
+    expirationDate.setTime(expirationDate.getTime() + minutes * 60 * 1000);
+    document.cookie = `${name}=${value};expires=${expirationDate.toUTCString()};path=/`;
   }

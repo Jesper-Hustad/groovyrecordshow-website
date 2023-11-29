@@ -8,14 +8,15 @@
 <body>
 
 <script>
-    async function checkCollaborator() {
+    async function showIsLive() {
+        const NAME_TO_CHECK = "Paul from CA"
         try {
             const response = await fetch('https://public.radio.co/stations/s369d6f962/status');
             if (!response.ok) return false;
 
             const { source } = await response.json();
-            console.log(source?.collaborator?.name)
-            return source?.collaborator?.name == 'Paul from CA' || false;
+            // console.log(source?.collaborator?.name)
+            return source?.collaborator?.name == NAME_TO_CHECK || false;
         } catch (error) {
             console.error('Error:', error);
             return false;
@@ -23,7 +24,7 @@
     }
 
     // Example usage
-    checkCollaborator().then(result => {
+    showIsLive().then(result => {
         console.log(result);
     });
 </script>

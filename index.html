@@ -59,25 +59,29 @@
         <p>The Groovy Record Show is currently off the air.</p>
         Next scheduled show:<br>
 
-        <b>December 22nd at 6pm</b>
+        <b id="next-show-date">December 22nd at 6pm</b>
+        <script src="calculateNextShow.js"></script>
 
-        
         </div>
         
         <div id="online-status" style="display: none;">
             <p>Radio show is: <b id="status-live">🔴 Live</b><br></p>
 
-            Listen live to The Groovy Record Show!<br><br>
+            Tune in live to The Groovy Record Show!<br>
+            <!-- Audio feed is available here or listen at <a  href="https://gutsyradio.org">GUTSYradio.org</a><br> -->
 
         </div>
+        <script>(async () => {
+            if(await showIsLive()){
+                document.getElementById("offline-status").style.display = "none";
+                document.getElementById("online-status").style.display = "block";
+        }})();</script>
+
         <br>
             <!-- <form>
                 <input class="full-width-input" type="text" placeholder="Type something..." />
                 <button class="full-width-button" type="submit">Submit</button>
             </form> -->
-
-
-            
 
 
             <!-- <form action="https://getform.io/f/d25cf119-8dd1-4350-9d99-ddbe8c56e865" method="POST">
@@ -99,7 +103,8 @@
         </p>
         <form onsubmit="sendContact(event)">
             <!-- <label for="nameInput" class="form-label">Name (optional):</label><br> -->
-            <input type="text" placeholder="Name (optional)" class="basic-input form-control" id="nameInput" style="width: 300px; height: 35px; font-size: large;">
+            <label for="nameInput" class="form-label">Name:</label><br>
+            <input type="text" placeholder="(optional)" class="basic-input form-control" id="nameInput" style="width: 300px; height: 35px; font-size: large;">
             <br>
             <!-- <br><br> -->
             
