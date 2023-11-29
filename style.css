@@ -122,7 +122,7 @@ body {
     /* box-shadow: 0 0 100px 100px #4a4d6349 inset; */
     mix-blend-mode: lighten;
     box-shadow: 0 0 100px 100px #1c1e2c inset;
-    opacity: 0.08;
+    opacity: 0.1;
     margin-top: 60px;
     /* filter: blur(10px); */
 }
