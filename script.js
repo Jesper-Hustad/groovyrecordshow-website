@@ -62,6 +62,7 @@ async function sendContact(ev) {
     const runCount = parseInt(getCookie('runCount')) || 0;
 
     if (runCount >= 2) {
+        alert("To many requests! Please try again later.")
         console.log('Function has already been run two times. Not running anymore.');
         return;
     }
