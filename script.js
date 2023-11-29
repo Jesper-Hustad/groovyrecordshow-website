@@ -122,3 +122,11 @@ async function sendContact(ev) {
     expirationDate.setTime(expirationDate.getTime() + minutes * 60 * 1000);
     document.cookie = `${name}=${value};expires=${expirationDate.toUTCString()};path=/`;
   }
+
+  document.addEventListener('DOMContentLoaded', function() {
+
+  var iframe = document.getElementById('myIframe');
+  iframe.addEventListener('load', function() {
+    iframe.classList.add('loaded');
+  });
+});

@@ -22,7 +22,11 @@
 
 
 <!-- import moon image -->
-<img id="top-right-image" src="assets/moon-surfacev2.png"> 
+<img id="top-right-image" src="assets/moon-surfacev2.webp"> 
+
+<div class="astronaut astrv1">
+    <img src="assets/astronaut2.png" style="width: 140px;">
+</div>
 
 <body>
 <div class="background">
@@ -31,13 +35,17 @@
 
 
         <!-- main swaying logo -->
-        <iframe class="canvas-iframe" id="myIframe" src="canvas.html" width="100%" height="450rem" frameborder="0"></iframe>
+        <div class="logo-loading-container">
+            <div class="loading-animation"></div>
+            <iframe class="canvas-iframe" id="myIframe" src="canvas.html" width="100%" height="450rem" frameborder="0"></iframe>
+        </div>
         
 
         <!-- PAGE CONTENT -->
         <!-- EDIT ANYTHING TO YOUR LIKING HERE -->
         <!-- LEARN HOW TO EDIT HTML HERE: https://www.w3schools.com/html/html_basic.asp -->
-        <br><br>
+        <br>
+        <!-- <br> -->
         <p>
             Live every other Friday from 6 to 8 at 
             <a href="https://gutsyradio.org">GUTSYradio.org</a>
@@ -103,7 +111,7 @@
         </p>
         <form onsubmit="sendContact(event)">
             <!-- <label for="nameInput" class="form-label">Name (optional):</label><br> -->
-            <label for="nameInput" class="form-label">Name:</label><br>
+            <label for="nameInput" class="form-label">Your name:</label><br>
             <input type="text" placeholder="(optional)" class="basic-input form-control" id="nameInput" style="width: 300px; height: 35px; font-size: large;">
             <br>
             <!-- <br><br> -->
@@ -111,10 +119,16 @@
             <label for="messageInput" class="form-label">Song request:</label>
             <br>
             <textarea placeholder="Deltailed description for Credos" class="form-control full-width-input basic-input" style="font-size: larger;" id="messageInput" rows="2"></textarea><br>
-            <button type="submit" class="button">Submit</button>
+            <div id="submit-button-target" style="text-align: right; width: 90%; margin-bottom: -50px;">
+                <button  type="submit" class="button" style="margin-top: 20px;">Submit</button>
+                <div class="astronaut astronautv2">
+                    <img src="assets/astronaut1.png" style="width: 130px;">
+                </div>
+            </div>
+            
         </form>
 
-        <br>
+        <!-- <br> -->
         <h2>Newsletter</h2>
         <p>
             Never miss an episode of The Groovy Record Show! <br>

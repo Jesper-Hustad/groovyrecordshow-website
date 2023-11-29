@@ -98,6 +98,47 @@ body {
     }
 }
 
+
+.canvas-iframe{
+    transform: scale(0);
+    transition: transform 1.2s;
+    transform-origin: 65% 75%;
+}
+
+.canvas-iframe.loaded {
+    transform: scale(1);
+    /* visibility: visible; */
+  }
+
+.loading-animation {
+    pointer-events: none;
+    position: absolute;
+    top: translate(-50%);
+    left: translate(-50%);
+    width: 514px;
+    height: 701px;
+    background: url('assets/hyperspacev1.gif') center center no-repeat;
+    background-size: cover;
+    /* box-shadow: 0 0 100px 100px #4a4d6349 inset; */
+    mix-blend-mode: lighten;
+    box-shadow: 0 0 100px 100px #1c1e2c inset;
+    opacity: 0.08;
+    margin-top: 60px;
+    /* filter: blur(10px); */
+}
+/* #1f1f2b, #1a1e2d */
+
+
+
+
+@media only screen and (min-width: 1400px) {
+    .loading-animation {
+        width: 839px;
+        height: 844px; 
+    }
+}
+
+
 .stars {
     background:#000 url(assets/stars.png) repeat top center;
     z-index:-1;
@@ -132,6 +173,85 @@ body {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
+}
+
+
+
+
+/* ASTRONAUT */
+.astronaut {
+    position: absolute;
+    top: 800px; /* Adjust the value as needed */
+    right: -5%;
+    transform: translateX(-50%);
+    animation: bobbing 2s infinite alternate; /* Adjust the animation duration and timing function as needed */
+    z-index: -1;
+    transform: translateX(-50%);
+}
+
+@media only screen and (min-width: 550px) {
+    .astrv1 {
+        top: 950px !important; /* Adjust the value as needed */
+        right: -5% !important;
+        /* margin-bottom: -90px !important; */
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    .astrv1 {
+        top: 950px !important; /* Adjust the value as needed */
+        right: 20% !important;
+        /* margin-bottom: -90px !important; */
+    }
+}
+
+.astronautv2 {
+    position: relative !important;
+    top: -58px !important;
+    right: 20px !important;
+    animation: bobbing2 2.4s infinite alternate;
+}
+
+@media only screen and (min-width: 1000px) {
+    .astronautv2 {
+        top: -98px !important;
+        right: 140px !important;
+        margin-bottom: -90px !important;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    .astronautv2 {
+        top: -98px !important;
+        right: 60% !important;
+        margin-bottom: -90px !important;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .astronautv2 {
+        top: -85px !important;
+        right: 90% !important;
+        margin-bottom: -90px !important;
+    }
+}
+
+@keyframes bobbing {
+    0% {
+        transform: translateX(-50%) translateY(0);
+    }
+    100% {
+        transform: translateX(-50%) translateY(-10px); /* Adjust the bobbing height as needed */
+    }
+}
+
+@keyframes bobbing2 {
+    0% {
+        transform: translateX(-50%) translateY(-8px);
+    }
+    100% {
+        transform: translateX(-50%) translateY(0px); /* Adjust the bobbing height as needed */
+    }
 }
 
 
