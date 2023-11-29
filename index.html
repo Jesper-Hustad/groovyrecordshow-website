@@ -52,21 +52,25 @@
         
 
         <h2>Show status</h2>
+
+        <div id="offline-status" >
         <p>Radio show is: <b>Offline</b><br></p>
 
-        <div id="offline-status">
         <p>The Groovy Record Show is currently off the air.</p>
         Next scheduled show:<br>
 
         <b>December 22nd at 6pm</b>
-    
-        <br><br>
 
         
         </div>
-
-        <div id="online-status">
         
+        <div id="online-status" style="display: none;">
+            <p>Radio show is: <b id="status-live">🔴 Live</b><br></p>
+
+            Listen live to The Groovy Record Show!<br><br>
+
+        </div>
+        <br>
             <!-- <form>
                 <input class="full-width-input" type="text" placeholder="Type something..." />
                 <button class="full-width-button" type="submit">Submit</button>
@@ -84,13 +88,13 @@
                 <button type="submit">Send</button>
             </form> -->
 
-        </div>
+        <h2>GUTSY Radio</h2>
+        <p>Live feed of the GUTSY radio channel</p>
         <iframe class="player-iframe" src="player/index.html" width="100%" height="100%" frameborder="0"></iframe>
 
         <h2>Song request</h2>
         <p>
-            Send in your very own song requests.
-            Every one is greatly appreciated!
+            For The Groovy Record Show. We love to hear from our listeners. Please send in your song requests!  <br>
             
         </p>
         <form onsubmit="sendContact(event)">

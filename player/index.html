@@ -120,7 +120,7 @@
 </div>
 
 <audio id="audio" controls style="display: none;">
-  <source src="" type="audio/aac">
+  <source src="https://s2.radio.co/s369d6f962/listen" type="audio/aac">
   Your browser does not support the audio element.
 </audio>
 
@@ -168,12 +168,14 @@
       return;
     }
 
-    const audio = document.getElementById("audio");
+    // const audio = document.getElementById("audio");
     const artwork = document.getElementById("artwork");
     const title = document.getElementById("title");
     const artist = document.getElementById("artist");
 
-    audio.src = "http://mediaserv30.live-streams.nl:8086/live"; 
+    
+    // audio.src = "https://s2.radio.co/s369d6f962/listen"; 
+    // audio.src = "http://mediaserv30.live-streams.nl:8086/live"; 
 
     artwork.src = data.current_track.artwork_url_large;
     title.textContent = data.current_track.title.split(" - ")[1].trim();
